@@ -1,0 +1,658 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: pink;
+}
+::-webkit-scrollbar-thumb{
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
+
+section{
+  padding: 100px 0;
+}
+
+/* Global Styles */
+body {
+  background-image: url('pink.png'); /* Ganti dengan path gambar Anda */
+  background-size: cover; /* Menutup seluruh area dengan gambar */
+  background-position: center; /* Menyelaraskan gambar di tengah */
+  background-repeat: no-repeat; /* Mencegah gambar berulang */
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.about,.services,.skills,.teams,.contact, footer{
+  font-family: 'Poppins' sans-serif;
+  
+}
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  left: 50px;
+}
+section .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px; font-weight: 500;
+  margin-bottom: 60px; padding-bottom:20px ;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+section .title ::before{
+  content: "";
+  position: absolute;
+  bottom: 0px; left: 50%;
+  width: 180px; height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+section .title::after{
+  position: absolute;
+  bottom: -8px; left: 50%;
+  font-size: 20px;
+  color: rgb(255, 0, 144);
+  padding: 0 5px; background: #fff;
+  transform: translateX(-50%);
+
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  transition: 0.3s ease;
+  z-index: 999;
+  background: pink;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar.sticky{
+  padding: 15px 0;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #ff4081;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar .logo a span {
+  color: #6c0125;
+}
+
+.navbar .menu {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  list-style: none;
+}
+
+.navbar .menu li {
+  margin: 0 10px;
+}
+
+.navbar .menu li a {
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.navbar .menu li a:hover,
+.navbar .menu li a.active {
+  color: #ff4081;
+}
+
+.navbar .menu-btn i {
+  color: #333;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-up-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  height: 45px;
+  width: 45px;
+  background: #ff4081;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover{
+  filter: brightness(90%);
+}
+/* Home Section Styles */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  background-attachment: fixed;
+  text-align: center; /* Menyelaraskan teks di tengah */
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+
+.home .home-content {
+  max-width: 600px;
+  margin: auto;
+}
+.profile-pic{
+  text-align: left;
+  max-width: 600px;
+  margin-left: 20px;
+}
+.home .home-content .text-1,
+.home .home-content .text-2,
+.home .home-content .text-3 {
+  color: #ff4081;
+  font-weight: 600;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+
+.home .home-content .text-2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 25px;
+  margin-top:10 ;
+}
+
+.home .home-content .text-3 span {
+  color: #ff4081;
+  font-weight: 500;
+}
+
+.home .home-content a {
+  display: inline-block;
+  background: #ff4081;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid palevioletred;
+  transition: all 0.3s ease;
+}
+
+.home .home-content a:hover {
+  background: pink;
+  color: #fff;
+  border-color: #fff;
+}
+
+
+/* About Section Styles */
+.about {
+  padding: 70px 0;
+}
+
+.about .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.about .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .column-left {
+  width: 48%;
+}
+
+.about .column-left img {
+  width: 60%;
+  border-radius: 6px;
+}
+
+.about .column-right {
+  width: 48%;
+}
+
+.about .column-right .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+.about .column-right p {
+  font-size: 16px;
+  color: #666;
+  line-height: 28px;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.about .column-right a {
+  display: inline-block;
+  background: #ff4081;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.about .column-right a:hover {
+  background: transparent;
+  color: #ff4081;
+  border-color: #ff4081;
+}
+
+/* Services Section Styles */
+.services {
+  padding: 100px 0;
+}
+
+.services .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.services .serv-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.services .card {
+  width: calc(33% - 10px);
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  transition: 0.3s ease;
+}
+
+.services .card .box {
+  text-align: center;
+}
+
+.services .card .box i {
+  font-size: 50px;
+  color: #ff4081;
+}
+
+.services .card .box .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.services .card .box p {
+  font-size: 16px;
+  color: #666;
+  line-height: 28px;
+}
+
+.services .card:hover {
+  transform: translateY(-10px);
+}
+
+/* Skills Section Styles */
+.skills {
+  padding: 100px 0;
+}
+
+.skills .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.skills .skills-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .column-left {
+  width: 48%;
+}
+
+.skills .column-left .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+.skills .column-left p {
+  font-size: 16px;
+  color: #666;
+  line-height: 28px;
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.skills .column-left a {
+  display: inline-block;
+  background: #ff4081;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 40px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.skills .column-left a:hover {
+  background: transparent;
+  color: #ff4081;
+  border-color: #ff4081;
+}
+
+.skills .column-right {
+  width: 48%;
+  height: 70%;
+}
+
+section.skills .bars .info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+section.skills .bars .line {
+  height: 10px;
+  border-radius: 5px;
+  background: #F67280;
+}
+
+section.skills .bars .line.html {
+  width: 90%;
+  background: #ff3c78;
+}
+
+section.skills .bars .line.css {
+  width: 80%;
+  background: #CC7A8B;
+}
+
+section.skills .bars .line.js {
+  width: 60%;
+  background: #F660AB;
+}
+
+section.skills .bars .line.php {
+  width: 20%;
+  background: #FFB2D0;
+}
+section.skills .bars .line.mysql {
+  width: 20%;
+  background: #FF0080;
+}
+.teams .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+section.services .card, section.teams .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+}
+
+section.services .box, section.teams .box {
+  text-align: center;
+}
+section.teams .carousel .card:hover{
+  background: pink;
+}
+section.teams .carousel .card:hover .box{
+  transform: scale(1.05);
+} 
+
+section.services .box i, section.teams .box img {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff3c78;
+}
+
+section.services .box .text, section.teams .box .text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.owl-dots{
+  text-align: center; margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5 px;
+  outline: none!important; border-radius: 50%;
+  border: 2px solid palevioletred!important; 
+  transition: all 0.3s ease; 
+}
+.owl-dot .active{
+  width: 35px; border-radius: 14px;
+}
+.owl-dot.active,.owl-dot:hover{
+  background: palevioletred!important;
+}
+/* Contact Section Styles */
+.contact {
+  padding: 100px 0;
+}
+
+
+.contact .title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact .contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact .contact-content .left p{
+  text-align: justify;
+}
+
+.contact .column-left,
+.contact .column-right {
+  width: 48%;
+  min-width: 300px;
+  margin-bottom: 20px; 
+}
+
+.contact .column-left .text,
+.contact .column-right .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact .column-left p {
+  font-size: 16px;
+  color: #666;
+  line-height:28px;
+  margin: 20px 0;
+}
+
+.contact .column-left .icons {
+  margin: 10px 0;
+}
+
+.contact .column-left .icons .row {
+  display: flex;
+  align-items: right;
+  margin: 10px 0;
+}
+
+.contact .column-left .icons .row i {
+  font-size: 25px;
+  color: #ff4081;
+  margin-right: 30px;
+}
+
+.contact .column-left .icons .row .info {
+  font-size: 16px;
+  color: #171010;
+  text-align: left;
+}
+
+.contact .column-left .icons .row .info .head {
+  font-weight: 600;
+  color: #0d0c0c;
+}
+
+.contact .column-left .icons .row .info .sub-title {
+  color: #100e0e;
+  font-size: 12px;
+}
+
+.contact .column-right .fields {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact .column-right .fields .field {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+.contact .column-right .field {
+  margin-bottom: 15px;
+}
+
+.contact .column-right .field input,
+.contact .column-right .field textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  outline: none;
+  resize: none;
+}
+
+.contact .column-right .field input:focus,
+.contact .column-right .field textarea:focus {
+  border-color: #ff4081;
+}
+
+.contact .column-right .button {
+  text-align: right;
+}
+
+.contact .column-right .button button {
+  background: #ff4081;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact .column-right .button button:hover {
+  background: #333;
+}
+/* Footer Styles */
+footer {
+  background: rgb(243, 221, 225);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer span {
+  color: #ff4081;
+}
